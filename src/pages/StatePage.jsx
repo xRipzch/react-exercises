@@ -20,9 +20,9 @@ function StateComponent() {
   return (
     <div>
       <h3>{count}</h3>
-      {/* TODO: ADD AN ONCLICK HANDLER TO INCREMENT THE COUNT */}
+      {/* TODO: ADD AN ONCLICK HANDLER TO THE BUTTON, THAT INCREMENTS THE COUNT */}
       <button>Increment</button>
-      {/* TODO: ADD AN ONCLICK HANDLER TO DECREMENT THE COUNT */}
+      {/* TODO: ADD AN ONCLICK HANDLER TO THE BUTTON, THAT DECREMENTS THE COUNT */}
       <button>Decrement</button>
     </div>
   );
