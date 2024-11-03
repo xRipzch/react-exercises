@@ -1,0 +1,83 @@
+/* ---- LIST STYLES ---- */
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding: 1em;
+}
+
+.list article {
+  margin: 0;
+  padding: 1em;
+  padding-right: 2em;
+  background-color: #e0e0e0;
+  border-radius: 0.2em;
+  align-items: center;
+  gap: 1em;
+  user-select: none;
+  display: flex;
+}
+
+.checkMark {
+  height: 18px;
+  width: 18px;
+  fill: white;
+  padding: 5px;
+  border-radius: 50%;
+}
+
+.completed {
+  background: green;
+}
+
+.list article h4 {
+  margin: 0;
+  padding: 0;
+}
+
+.list article button {
+  padding: 0.5em;
+  border-radius: 0.2em;
+  border: 1px solid #e0e0e0;
+  background-color: #e21e1e;
+  color: white;
+  cursor: pointer;
+}
+
+.list article button:hover {
+  background-color: #d00d0d;
+}
+
+.todoItem {
+  display: flex;
+  /* gap: 1em; */
+  align-items: center;
+}
+
+/* ---- FORM STYLES ---- */
+
+.form {
+  display: flex;
+  gap: 1em;
+  padding: 1em;
+}
+
+.form input {
+  padding: 0.5em;
+  border-radius: 0.2em;
+  border: 1px solid #e0e0e0;
+  width: 100%;
+}
+
+.form button {
+  padding: 0.7em 1em;
+  border-radius: 0.2em;
+  border: 1px solid #00aa2b;
+  background-color: #00aa2b;
+  color: white;
+  cursor: pointer;
+}
+
+.form button:hover {
+  background-color: #009a2b;
+}

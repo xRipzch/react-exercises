@@ -1,0 +1,12 @@
+.container button {
+  padding: 0.7em 1em;
+  border-radius: 0.2em;
+  border: 1px solid #e0e0e0;
+  background-color: #e0e0e0;
+  cursor: pointer;
+  margin: 1em;
+}
+
+.container button:hover {
+  background-color: #d0d0d0;
+}

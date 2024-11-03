@@ -1,0 +1,19 @@
+/* ---- Loading spinner ---- */
+
+.loadingSpinner {
+  display: block;
+  margin: 0 auto;
+  animation: spinner 1500ms linear infinite;
+  height: 18px;
+  width: 18px;
+  padding: 2em;
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

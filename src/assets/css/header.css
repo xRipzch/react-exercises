@@ -1,0 +1,41 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  color: black;
+  padding: 1em 0;
+  border-bottom: 1px solid #eaeaea;
+  align-items: center;
+}
+
+.header h3 {
+  margin: 0;
+  padding: 0;
+}
+
+.header a {
+  color: black;
+  text-decoration: none;
+}
+
+.currentRoute {
+  font-weight: bold;
+  background-color: #eaeaea;
+}
+
+.header li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0.3em 1em;
+  border-radius: 0.3em;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+}
+
+.header ul {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
