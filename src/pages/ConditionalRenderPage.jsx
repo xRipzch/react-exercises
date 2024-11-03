@@ -20,7 +20,6 @@ function ConditionalComponent() {
     <div>
       <h3>
         {/* TODO: RENDER "Welcome back!" IF THE USER IS LOGGED IN, else "Please log in" */}
-        {/* {isLoggedIn ? "Welcome back!" : "Please log in"} */}
       </h3>
       <button onClick={() => setIsLoggedIn(!isLoggedIn)}>
         {/* TODO: RENDER "Log out" IF THE USER IS LOGGED IN, else "Log in" */}
