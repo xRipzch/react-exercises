@@ -68,7 +68,7 @@ See `/src/pages/FetchIdPage.jsx` for the exercise instructions.
 git clone https://github.com/KEA-DAT-E23ABC/todo-backend-reactintro.git
 ```
 
-- Use IntelliJ to open the backend project and run the server.
+- Use VSCode to open the backend project and run the server.
 
 #### Instructions
 
