@@ -8,7 +8,7 @@ export default function ConditionalRenderPage() {
         Conditional rendering is used to display different components or
         elements based on certain conditions.
       </p>
-      {/* TODO: RENDER THE COMPONENT HERE */}
+      <ConditionalComponent />
     </div>
   );
 }
@@ -19,10 +19,10 @@ function ConditionalComponent() {
   return (
     <div>
       <h3>
-        {/* TODO: RENDER "Welcome back!" IF THE USER IS LOGGED IN, else "Please log in" */}
+        {isLoggedIn ? "Welcome back!" : "Please log in"} 
       </h3>
       <button onClick={() => setIsLoggedIn(!isLoggedIn)}>
-        {/* TODO: RENDER "Log out" IF THE USER IS LOGGED IN, else "Log in" */}
+        {isLoggedIn ? "Logout" : "Please Login"}
       </button>
     </div>
   );
