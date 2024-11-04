@@ -23,8 +23,8 @@ function App() {
         <Route path="/props" element={<PropsPage />} />
         <Route path="/state" element={<StatePage />} />
         <Route path="/conditionalrender" element={<ConditionalRenderPage />} />
-        <Route path="/lists" element={<ListsPage />} />
         <Route path="/forms" element={<FormsPage />} />
+        <Route path="/lists" element={<ListsPage />} />
         <Route path="/fetch" element={<FetchPage />} />
         <Route path="/fetch/:id" element={<FetchIdPage />} />
         <Route path="/todos" element={<TodosPage />} />

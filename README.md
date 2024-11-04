@@ -42,13 +42,13 @@ See `/src/pages/StatePage.jsx` for the exercise instructions.
 
 See `/src/pages/ConditionalRenderPage.jsx` for the exercise instructions.
 
-### 4. Lists Exercise
-
-See `/src/pages/ListsPage.jsx` for the exercise instructions.
-
-### 5. Forms Exercise
+### 4. Forms Exercise
 
 See `/src/pages/FormsPage.jsx` for the exercise instructions.
+
+### 5. Lists Exercise
+
+See `/src/pages/ListsPage.jsx` for the exercise instructions.
 
 ### 6. Fetch Exercise
 
