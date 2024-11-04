@@ -2,23 +2,30 @@ import { useState } from "react";
 
 export default function FormsPage() {
   const [name, setName] = useState("");
+  const [inputValue, setInputValue] = useState("");
 
   const handleSubmit = e => {
     e.preventDefault();
-    // TODO: Extract input value and set state
-    // TODO: Reset input value
+    setName(inputValue);
+    setInputValue("");
   };
 
   const handleReset = () => {
-    // Handle reset of state
+    setName("");
+    setInputValue("");
   };
 
   return (
     <div className="container">
       <h1>Forms Page</h1>
-      {/* TODO: Handle the form submission. */}
-      <form>
-        <input type="text" name="inputName" placeholder="Name" />
+      <form onSubmit={handleSubmit}>
+        <input
+          type="text"
+          name="inputName"
+          placeholder="Name"
+          value={inputValue}
+          onChange={e => setInputValue(e.target.value)}
+        />
         <button type="submit">Submit</button>
         <button type="button" onClick={handleReset}>
           Reset
