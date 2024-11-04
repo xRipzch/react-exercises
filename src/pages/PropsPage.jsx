@@ -3,7 +3,7 @@ import "../assets/css/props.css";
 
 export default function PropsPage() {
   const user = {
-    name: "John Doe",
+    name: "Anders Ravn",
     email: "john@doe.com",
   };
   return (
@@ -13,17 +13,18 @@ export default function PropsPage() {
         Props are used to pass data from a parent component to a child
         component.
       </p>
-      {/* TODO: RENDER THE CHILD COMPONENT HERE, PASSING THE USER OBJECT AS A PROP */}
+      <ChildComponent user={user} />
     </div>
   );
 }
 
 /* TODO: Make the component accept the user prop */
-function ChildComponent() {
+function ChildComponent({ user }) {
   return (
     <div className="child">
       <h3>Props (Child component)</h3>
-      {/* TODO: RENDER the props here */}
+      <p>Name: {user.name}</p>
+      <p>Email: {user.email}</p>
     </div>
   );
 }
