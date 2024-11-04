@@ -13,6 +13,7 @@ import FetchIdPage from "./pages/FetchIdPage";
 import TodosPage from "./pages/TodosPage";
 import ConditionalRenderPage from "./pages/ConditionalRenderPage";
 import ListsPage from "./pages/ListsPage";
+import FormsPage from "./pages/FormsPage";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="/state" element={<StatePage />} />
         <Route path="/conditionalrender" element={<ConditionalRenderPage />} />
         <Route path="/lists" element={<ListsPage />} />
+        <Route path="/forms" element={<FormsPage />} />
         <Route path="/fetch" element={<FetchPage />} />
         <Route path="/fetch/:id" element={<FetchIdPage />} />
         <Route path="/todos" element={<TodosPage />} />
