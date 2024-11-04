@@ -22,7 +22,7 @@ export default function FormsPage() {
         <input
           type="text"
           name="inputName"
-          placeholder="Name"
+          placeholder="Please enter your name"
           value={inputValue}
           onChange={e => setInputValue(e.target.value)}
         />

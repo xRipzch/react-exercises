@@ -11,10 +11,18 @@ export default function TodosPage() {
   const [todos, setTodos] = useState([]);
 
   useEffect(() => {
-    // TODO: Fetch todos and update the state
+    const fetchTodos = async () => {
+      try {
+        const fetchedTodos = await getTodos();
+        setTodos(fetchedTodos);
+      } catch (error) {
+        console.error("Error fetching todos:", error);
+      }
+    };
+    fetchTodos();
   }, []);
 
-  const handleSubmit = async e => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const form = new FormData(e.target);
 
@@ -23,18 +31,35 @@ export default function TodosPage() {
       completed: false,
     };
 
-    // TODO: Add the new todo and update the todos list
-
-    // TODO: RESET THE FORM AFTER ADDING THE TODO
+    try {
+      await addTodo(newTodo);
+      const updatedTodos = await getTodos();
+      setTodos(updatedTodos);
+      e.target.reset();
+    } catch (error) {
+      console.error("Error adding todo:", error);
+    }
   };
 
-  const handleToggleComplete = async todoToToggle => {
+  const handleToggleComplete = async (todoToToggle) => {
     const updatedTodo = { ...todoToToggle, completed: !todoToToggle.completed };
-    // TODO: Update the todo completion status and refresh the todos list
+    try {
+      await updateTodoById(updatedTodo.id, updatedTodo);
+      const updatedTodos = await getTodos();
+      setTodos(updatedTodos);
+    } catch (error) {
+      console.error("Error updating todo:", error);
+    }
   };
 
-  const handleDelete = async todoToDelete => {
-    // TODO: Delete the selected todo and refresh the todos list
+  const handleDelete = async (todoToDelete) => {
+    try {
+      await deleteTodoById(todoToDelete.id);
+      const updatedTodos = await getTodos();
+      setTodos(updatedTodos);
+    } catch (error) {
+      console.error("Error deleting todo:", error);
+    }
   };
 
   return (
@@ -42,7 +67,11 @@ export default function TodosPage() {
       <h1>Todos Exercise</h1>
       <TodoForm handleSubmit={handleSubmit} />
       {todos.length === 0 && <p>No todos</p>}
-      {/* RENDER THE TodosList COMPONENT HERE AND PASS THE NECESSARY PROPS */}
+      <TodosList
+        todos={todos}
+        handleToggleComplete={handleToggleComplete}
+        handleDelete={handleDelete}
+      />
     </div>
   );
 }
